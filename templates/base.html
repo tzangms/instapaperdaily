@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Instapaper daily</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+	</head>
+	<body>
+			<div id="wrapper" class="divided">
+
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+                            {% block content %}{% endblock %}
+						</div>
+						<div class="image">
+							<img src="{% static "images/aga-putra-125108.jpg" %}" alt="" />
+						</div>
+					</section>
+			</div>
+	</body>
+</html>
+

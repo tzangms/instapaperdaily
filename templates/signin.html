@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Sign in</h1>
+<span>No password is saved, we save token</span>
+<hr />
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Sign in with Instapaper" />
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% block subject %}{{ subject }}{% endblock %}
+
+{% block html %}
+
+<h1>Instapaper Daily</h1>
+
+<hr />
+
+{% for bookmark in bookmarks %}
+    <h3><a href="{{ bookmark.url }}">{{ bookmark.title }}</a></h3>
+    <div>
+    {{ bookmark.get_text|striptags|truncatechars:"500" }}
+    </div>
+{% endfor %}
+
+{% endblock %}
+

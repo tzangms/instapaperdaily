@@ -1,0 +1,16 @@
+appdirs==1.4.3
+Django==1.11
+httplib2==0.9.1
+oauth2==1.9.0.post1
+packaging==16.8
+pyparsing==2.2.0
+pytz==2017.2
+six==1.10.0
+waitress==1.0.2
+django-static==1.5.6
+dj-database-url==0.4.2
+django-templated-email==2.1
+psycopg2==2.7.1
+requests==2.13.0
+dj-static==0.0.6
+static3==0.7.0

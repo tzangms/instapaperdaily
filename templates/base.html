@@ -11,6 +11,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+        <meta property="og:url"           content="{{ request.build_absolute_uri }}" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Instapaper daily" />
+        <meta property="og:description"   content="Email to your inbox with few instapaper articles every day, in case you forgot to read it." />
+        <meta property="og:image"         content="https://instapaperdaily.herokuapp.com/static/images/aga-putra-125108.jpg" />
 	</head>
 	<body>
 			<div id="wrapper" class="divided">
@@ -26,4 +31,3 @@
 			</div>
 	</body>
 </html>
-

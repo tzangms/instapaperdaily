@@ -1,3 +1,5 @@
+import random
+
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 from django.conf import settings
@@ -22,7 +24,10 @@ class Command(BaseCommand):
                 settings.INSTAPAPER_KEY, settings.INSTAPAPER_SECRET, 
                 user.profile.oauth_token, user.profile.oauth_token_secret)
 
-            bookmarks = instapaper.get_bookmarks(limit=3)
+
+            # random
+            bookmarks = instapaper.get_bookmarks(limit=200)
+            bookmarks = random.sample(bookmarks, 3)
 
             
             # bypass who has no bookmarks

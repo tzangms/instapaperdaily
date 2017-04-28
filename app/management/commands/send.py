@@ -7,9 +7,16 @@ from templated_email import send_templated_mail
 from app.instapaper import Instapaper
 
 class Command(BaseCommand):
+    def add_arguments(self, parser):
+        parser.add_argument('--email', nargs='+')
 
     def handle(self, *args, **options):
-        for user in User.objects.all():
+        users = User.objects.all()
+
+        if options['email']:
+            users = users.filter(email__in=options['email'])
+
+        for user in users:
             print("Processing for {}".format(user.email))
             instapaper = Instapaper(
                 settings.INSTAPAPER_KEY, settings.INSTAPAPER_SECRET, 

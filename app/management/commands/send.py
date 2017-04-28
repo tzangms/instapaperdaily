@@ -24,6 +24,11 @@ class Command(BaseCommand):
 
             bookmarks = instapaper.get_bookmarks(limit=3)
 
+            
+            # bypass who has no bookmarks
+            if len(bookmarks) == 0:
+                continue
+
             # get subject
             subject = bookmarks[0].title
 

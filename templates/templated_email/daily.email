@@ -7,7 +7,7 @@
 <hr />
 
 {% for bookmark in bookmarks %}
-    <h3><a href="{{ bookmark.url }}">{{ bookmark.title }}</a></h3>
+    <h3><a href="{{ bookmark.url }}">{{ bookmark.title|default:"..." }}</a></h3>
     <div>
     {{ bookmark.get_text|striptags|truncatechars:"500" }}
     </div>

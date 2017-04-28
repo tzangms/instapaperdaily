@@ -247,7 +247,11 @@ class Bookmark(InstapaperObject):
 
     def get_text(self):
         params = {'bookmark_id': self.bookmark_id}
-        resp = self.client.request('bookmarks/get_text', params)
+        try:
+            resp = self.client.request('bookmarks/get_text', params)
+        except Exception:
+            return '...'
+
         return resp['data']
 
     def archive(self):

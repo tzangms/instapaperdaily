@@ -10,6 +10,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         for user in User.objects.all():
+            print("Processing for {}".format(user.email))
             instapaper = Instapaper(
                 settings.INSTAPAPER_KEY, settings.INSTAPAPER_SECRET, 
                 user.profile.oauth_token, user.profile.oauth_token_secret)

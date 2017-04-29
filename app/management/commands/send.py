@@ -13,7 +13,7 @@ class Command(BaseCommand):
         parser.add_argument('--email', nargs='+')
 
     def handle(self, *args, **options):
-        users = User.objects.all()
+        users = User.objects.order_by('-id')
 
         if options['email']:
             users = users.filter(email__in=options['email'])

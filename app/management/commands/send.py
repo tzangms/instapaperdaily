@@ -27,7 +27,8 @@ class Command(BaseCommand):
 
             # random
             bookmarks = instapaper.get_bookmarks(limit=200)
-            bookmarks = random.sample(bookmarks, 3)
+            if len(bookmarks) > 3:
+                bookmarks = random.sample(bookmarks, 3)
 
             
             # bypass who has no bookmarks

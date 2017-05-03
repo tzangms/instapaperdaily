@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
     'app'
 ]
 
@@ -151,3 +152,8 @@ AUTHENTICATION_BACKENDS = (
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+GRAPHENE = {
+    'SCHEMA': 'schema.schema'
+}

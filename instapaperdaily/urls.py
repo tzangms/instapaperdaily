@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from graphene_django.views import GraphQLView
 
 from app import views
 
@@ -23,4 +24,5 @@ urlpatterns = [
     url(r'^accounts/login/$', views.signin),
     url(r'^success/$', views.success),
     url(r'^admin/', admin.site.urls),
+    url(r'^graphql', GraphQLView.as_view(graphiql=True)),
 ]

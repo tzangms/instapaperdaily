@@ -7,3 +7,6 @@ class Profile(models.Model):
     uid = models.PositiveIntegerField()
     oauth_token = models.CharField(max_length=100)
     oauth_token_secret = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user.email

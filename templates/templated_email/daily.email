@@ -1,7 +1,8 @@
 {% block subject %}{{ subject }}{% endblock %}
 
 {% block html %}
-
+<!DOCTYPE html>
+<html>
 <h1>Instapaper Daily</h1>
 
 <hr />
@@ -13,5 +14,6 @@
     </div>
 {% endfor %}
 
+</html>
 {% endblock %}
 
